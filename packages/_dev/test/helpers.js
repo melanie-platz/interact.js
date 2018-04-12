@@ -119,4 +119,10 @@ export function mockInteractable (props) {
     props);
 }
 
+export function getProps (src, props) {
+  return props.reduce((acc, prop) => {
+    acc[prop] = src[prop];
+    return acc;
+  }, {});
+}
 export { _ };
